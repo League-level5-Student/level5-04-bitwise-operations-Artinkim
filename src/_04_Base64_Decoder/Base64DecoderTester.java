@@ -63,7 +63,6 @@ public class Base64DecoderTester {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		byte[] bits = Base64Decoder.base64StringToByteArray(file);
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("src/_04_Base64_Decoder/decoded_string.txt"));
@@ -72,6 +71,7 @@ public class Base64DecoderTester {
 			while (line != null) {
 				assertEquals(bits[ctr++], Byte.parseByte(line));
 				line = br.readLine();
+				System.out.println(2);
 			}
 			br.close();
 		} catch (FileNotFoundException e) {
